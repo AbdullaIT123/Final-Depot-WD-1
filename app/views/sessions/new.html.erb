@@ -1,0 +1,23 @@
+<h1>Create a session and User ID</h1>
+<div class="alert">
+<% if flash[:alert] %>
+<p id="notice"><%= flash[:alert] %></p>
+<% end %>
+</div>
+<%= form_tag do %>
+<fieldset>
+<legend>Please Log In</legend>
+<div class="form-group">
+<%= label_tag :name, 'Name:' %>
+<%= text_field_tag :name, params[:name] %>
+</div>
+<div class="form-group">
+<%= label_tag :password, 'Password:' %>
+<%= password_field_tag :password, params[:password] %>
+</div>
+<div class="actions">
+<%= submit_tag "Login", class:"w3-button" %>
+</div>
+</fieldset>
+<% end %>
+</div>

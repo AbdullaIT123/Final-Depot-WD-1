@@ -53,7 +53,14 @@
       <a href="/products" class="w3-bar-item w3-button w3-border; margin: left; width: 50%; padding-right: 131px; padding-left: 131px; font-size:10px;">Manage Products</a>
       
     </div>
-    
+     <% if session[:user_id] %>
+   <ul>
+ <li><%= link_to 'Orders', orders_path %></li>
+   <li><%= link_to 'Products', products_path %></li>
+  <li><%= link_to 'Users', users_path %></li>
+  </ul>
+ <%= button_to 'Logout', logout_path, method: :delete %>
+ <% end %>
    <div class="w3-container">
     <%= yield %>
    </div>    

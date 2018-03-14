@@ -11,10 +11,7 @@
     </div>
   <% end %>
 
-<div class="form-group">
-    <%= f.label :pay_type %>
-    <%= f.select :pay_type, Order.pay_types.keys, prompt: 'Select a payment method',  class:"form-control"   %>
-  </div>
+
 
   <div class="w3-panel">
     <%= f.label :name %>
@@ -31,9 +28,9 @@
     <%= f.text_field :email , class:"w3-input w3-border" %>
   </div>
 
-  <div class="w3-panel">
+ <div class="form-group">
     <%= f.label :pay_type %>
-    <%= f.number_field :pay_type , class:"w3-input w3-border" %>
+    <%= f.select :pay_type, Order.pay_types.keys, prompt: 'Select a payment method',  class:"form-control"   %>
   </div>
 
   <div class="actions">
